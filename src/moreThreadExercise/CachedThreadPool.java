@@ -1,0 +1,15 @@
+package moreThreadExercise;
+
+import java.util.concurrent.*;
+
+public class CachedThreadPool {
+	public static void main(String[] args) {
+		ExecutorService exec=Executors.newFixedThreadPool(5);
+		for(int i=0;i<5;i++) {
+			exec.execute(new LiffOff());
+			
+		}
+		exec.shutdown();
+	}
+
+}
